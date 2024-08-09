@@ -1,5 +1,5 @@
-# Use the Nginx image from Docker Hub
-FROM nginx:alpine
+# Use the Nginx image from Docker Hub, specifying the arm64 version
+FROM --platform=linux/arm64 nginx:alpine
 
 # Remove the default nginx static assets
 RUN rm -rf /usr/share/nginx/html/*
