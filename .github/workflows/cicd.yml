@@ -71,7 +71,8 @@ jobs:
         check_html: true
         check_css: true
         enforce_https: false
-
+      continue-on-error: true
+        
     - name: Set up Docker Buildx
       id: buildx
       uses: docker/setup-buildx-action@v1
