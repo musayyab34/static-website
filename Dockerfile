@@ -2,7 +2,7 @@
 FROM --platform=linux/arm64 nginx:alpine
 
 # Remove the default nginx static assets
-RUN rm -rf /usr/share/nginx/html/*
+#RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the static content from your project into the container
 COPY . /usr/share/nginx/html
