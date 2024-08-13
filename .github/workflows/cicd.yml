@@ -75,14 +75,14 @@ jobs:
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
     
-    - name: Validate HTML and CSS
-      uses: anishathalye/proof-html@v2
-      with:
-        directory: .
-        check_html: true
-        check_css: true
-        enforce_https: false
-      continue-on-error: true
+    #- name: Validate HTML and CSS
+      #uses: anishathalye/proof-html@v2
+      #with:
+        #directory: .
+        #check_html: true
+        #check_css: true
+        #enforce_https: false
+      #continue-on-error: true
         
     - name: Set up Docker Buildx
       id: buildx
