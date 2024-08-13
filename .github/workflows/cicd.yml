@@ -53,6 +53,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # or the version of Node.js that matches your development environment
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
